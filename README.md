@@ -3,11 +3,13 @@ Practice for setting up and running a local kubernetes cluster involving a micro
 
 # Setup
 ## Pre-requisites
+This project is coded in Windows so that is the first requirement (unless you want to change/fix the code for diff OS)
+
 Need to have Kind, Docker, and Kubectl installed, you can refer to the guides below if you do not:  
 Kind/Kubectl: https://kubernetes.io/docs/tasks/tools/  
 Docker: https://docs.docker.com/get-docker/  
 
-Need to be able to run shell scripts, so if you are on windows you want git-bash installed (Unix and Mac OS's are fine)  
+Need to be able to run shell scripts, one of the options is git bash
 https://gitforwindows.org/  
 
 The latest image of postgres from Docker: https://hub.docker.com/_/postgres  
@@ -16,7 +18,7 @@ Command to run in the terminal: docker pull postgres
 ## Starting
 The scripts folder contains a setup.sh which you can pass an argument for the name of a cluster you want to create or just run the file 
 
-To run scripts with arguments you need to be in a cli (git-bash on Windows, whereas all terminals should work on Mac/Unix OS... to my knowledge so no promises) 
+To run scripts with arguments you need to be in a cli like git bash, powershell, or command prompt
 
 #### Example (with argument)
 ```./setup.sh my-cluster```  
@@ -56,4 +58,5 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - setup a way to transfer the local data into a default website template
 - visualiser for the data
 - setup links to external websites (e.g. here's where you can watch/buy/play x)
-- config file for changing defaults, like the default cluster name from "hobbies" to anything else really
+- config file for changing defaults, like the default cluster name from "hobbies" to anything else really 
+- make it multi-OS conpatible (current issue: git-bash file paths interpretation requires different code from Unix based OS in clean.sh)
