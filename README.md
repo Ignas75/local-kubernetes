@@ -7,8 +7,11 @@ Need to have Kind, Docker, and Kubectl installed, you can refer to the guides be
 Kind/Kubectl: https://kubernetes.io/docs/tasks/tools/
 Docker: https://docs.docker.com/get-docker/ 
 
-Need to be able to run shell scripts, so if you are on windows you want git-bash installed 
+Need to be able to run shell scripts, so if you are on windows you want git-bash installed (Unix and Mac OS's are fine)
 https://gitforwindows.org/ 
+
+The latest image of postgres from Docker: https://hub.docker.com/_/postgres
+Command to run in the terminal: docker pull postgres
 
 ## Starting
 The scripts folder contains a setup.sh which you can pass an argument for the name of a cluster you want to create or just run the file
@@ -32,12 +35,14 @@ Alternatively, if you deleted the files all that needs to be done is to open the
 
 # Overall Idea for Micro-Service
 I have a bunch of things I like doing so the goal is to create an easily accessible/modifiable list of what I like that is:
-music, games, anime, manga, light novels, boardgames, music artists, art (?), mobile games (I am unashamed for liking these... mostly) 
+music, games, anime, manga, light novels, boardgames, music artists, art (?), mobile games (I am unashamed for liking mobile games... mostly) 
+
+The database chosen is postgresql, no strong reasons other than it being open-source
 
 ## TO DO: 
 - [x] Create cluster creation/deletion script 
-- [ ] Create DB init script 
-- [ ] Script for DB in a container in the cluster (with PV?)
+- [ ] Create DB init script (tables and relations)
+- [x] Script for Postgres in a container in the cluster 
 - [ ] Script for importing CSVs into DB 
 - [ ] Micro-service for querying and modifying the DB 
 - [ ] Setup the micro-service in a pod (using a script) where it has access to the DB 
