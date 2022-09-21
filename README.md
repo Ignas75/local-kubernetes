@@ -43,7 +43,7 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 
 ## TO DO: 
 - [x] Create cluster creation/deletion script 
-- [ ] Create DB init script (tables and relations)
+- [x] Create DB init script (tables and relations)
 - [x] Script for Postgres in a container in the cluster 
 - [ ] Script for importing CSVs into DB 
 - [ ] Micro-service for querying and modifying the DB 

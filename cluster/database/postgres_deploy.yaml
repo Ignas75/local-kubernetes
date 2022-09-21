@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: postgres
+        image: hobbies/postgres:v1.0
+        imagePullPolicy: Never
         ports:
         - containerPort: 5432
         env: 
@@ -25,6 +26,8 @@ spec:
               secretKeyRef:
                 name: postgres-secret
                 key: password
+          - name: POSTGRES_DB
+            value: hobbies
       volumes: 
       - name: postgres-storage
         persistentVolumeClaim:
