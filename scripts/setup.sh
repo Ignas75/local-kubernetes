@@ -10,7 +10,7 @@ fi
 kind create cluster --name=${cluster_name}
 
 # creating the postgres resources
-kubectl apply -f ./cluster/database/
+kubectl apply -f ../cluster/database/
 
 # storing the kind cluster name in a file for use in deletion
 mkdir temp
