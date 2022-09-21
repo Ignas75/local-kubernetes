@@ -35,6 +35,12 @@ Run the ```./clean.sh script```, this will make use of temporary files created d
 
 Alternatively, if you deleted the temporary files all that needs to be done is to open the docker GUI/docker commands in a cli to find the docker container created by kind which should have a "-control-plane" suffix and if you used the default name then it should be called "hobbies-control-plane"
 
+# Repo Structure
+```/cluster``` contains kubernetes resources that are created in kind clusters  
+```/docker``` contains dockerfiles and resources needed for images used by resources in ```/cluster```   
+```/scripts``` contains startup and cleanup scripts, temp files used by the cleanup are created and stored here by the startup script 
+```/tests``` currently only contains instructions for manual tests (that I don't want to forget)  
+
 # Overall Idea for Micro-Service
 I have a bunch of things I like doing so the goal is to create an easily accessible/modifiable list of what I like that is:  
 music, games, anime, manga, light novels, boardgames, books, audiobooks, podcasts, art (?), mobile games (I am unashamed for liking mobile games... mostly) 
@@ -49,7 +55,6 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [ ] Micro-service for querying and modifying the DB 
 - [ ] Setup the micro-service in a pod (using a script) where it has access to the DB 
 - [ ] Add nginx as a front-proxy for the micro-service
-
 
 # Extensions/Future Projects (aka, feature creep dump):
 - endpoint "Random" that recommends anything (or if given a category, from the category)
