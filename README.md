@@ -13,7 +13,7 @@ Need to be able to run shell scripts, one of the options is git bash
 https://gitforwindows.org/  
 
 The latest image of postgres from Docker: https://hub.docker.com/_/postgres  
-Command to run in the terminal: docker pull postgres
+Command to run in the terminal: ```docker pull postgres```
 
 ## Starting
 The scripts folder contains a setup.sh which you can pass an argument for the name of a cluster you want to create or just run the file 
