@@ -9,6 +9,10 @@ fi
 # creating the kind cluster
 kind create cluster --name=${cluster_name}
 
+# building and loading the docker image for postgres into kind cluster 
+docker build ../docker/postgres/ -t hobbies/postgres:v1.0
+kind load docker-image hobbies/postgres:v1.0 --name=hobbies
+
 # creating the postgres resources
 kubectl apply -f ../cluster/database/
 
