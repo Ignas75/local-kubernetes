@@ -41,6 +41,24 @@ Alternatively, if you deleted the temporary files all that needs to be done is t
 ```/scripts``` contains startup and cleanup scripts, temp files used by the cleanup are created and stored here by the startup script 
 ```/tests``` currently only contains instructions for manual tests (that I don't want to forget)  
 
+# How To
+
+## Execute sql upon startup for Postgres Pod
+You can add your sql either at the end of the ```init.sql``` file in ```\docker\postgres``` or in another sql file in the same folder.
+
+
+## Import Data from CSVs into Postgres (on startup)
+Add your CSV into ```/docker/postgres/sample_data/``` and follow the COPY format inside init.sql
+
+COPY TABLENAME(attribute, attribute 2, ... )  
+FROM '/sample/FILENAME.csv'  
+WITH (FORMAT csv);  
+
+where 
+TABLENAME is the table you are inserting into,  
+the attributes are attributes of the table being inserted to and match the order inside of the csv,  
+FILENAME is the name of the csv file you are importing
+
 # Overall Idea for Micro-Service
 I have a bunch of things I like doing so the goal is to create an easily accessible/modifiable list of what I like that is:  
 music, games, anime, manga, light novels, boardgames, books, audiobooks, podcasts, art (?), mobile games (I am unashamed for liking mobile games... mostly) 
