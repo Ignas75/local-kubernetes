@@ -1,8 +1,8 @@
-## Is postgres running
+## Is postgres running?
 ```kubectl get pods```
 Should find a pod that is up and running with a "postgres-" prefix
 
-## Can you connect to the postgres pod
+## Can you connect to the postgres pod?
 using a pod name from the previous step
 ```kubectl exec -it <insertPodNameHere> -- psql -U postgres```
 (in powershell/command prompt, not git-bash)

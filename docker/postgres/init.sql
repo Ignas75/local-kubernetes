@@ -35,3 +35,11 @@ CREATE TABLE song_feature (
 	FOREIGN KEY (music_artists_id) 
 		REFERENCES music_artists(music_artists_id)
 );
+
+COPY music_artists(name)
+FROM '/sample/music_artists.csv'
+WITH (FORMAT csv);
+
+COPY song_genres(name) 
+FROM '/sample/song_genres.csv'
+WITH (FORMAT csv);

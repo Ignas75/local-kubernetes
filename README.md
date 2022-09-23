@@ -51,7 +51,7 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [x] Create cluster creation/deletion script 
 - [x] Create DB init script (tables and relations)
 - [x] Script for Postgres in a container in the cluster 
-- [ ] Script for importing CSVs into DB 
+- [x] Importing CSVs into DB 
 - [ ] Micro-service for querying and modifying the DB 
 - [ ] Setup the micro-service in a pod (using a script) where it has access to the DB 
 - [ ] Add nginx as a front-proxy for the micro-service
@@ -64,4 +64,4 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - visualiser for the data
 - setup links to external websites (e.g. here's where you can watch/buy/play x)
 - config file for changing defaults, like the default cluster name from "hobbies" to anything else really 
-- make it multi-OS conpatible (current issue: git-bash file paths interpretation requires different code from Unix based OS in clean.sh)
+- make it multi-OS compatible (current issue: git-bash file paths interpretation requires different code from Unix based OS in clean.sh)

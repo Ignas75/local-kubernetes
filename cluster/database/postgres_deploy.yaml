@@ -28,6 +28,8 @@ spec:
                 key: password
           - name: POSTGRES_DB
             value: hobbies
+          - name: PGDATA
+            value: "/mnt/data"
       volumes: 
       - name: postgres-storage
         persistentVolumeClaim:
