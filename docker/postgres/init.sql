@@ -1,14 +1,14 @@
-CREATE TABLE music_artists (
+CREATE TABLE IF NOT EXISTS music_artists (
 	music_artists_id serial PRIMARY KEY, 
 	name VARCHAR ( 50 ) NOT NULL
 );
 
-CREATE TABLE song_genres (
+CREATE TABLE IF NOT EXISTS song_genres (
 	genre_id serial PRIMARY KEY,
 	name VARCHAR (50) NOT NULL
 );
 
-CREATE TABLE songs (
+CREATE TABLE IF NOT EXISTS songs (
 	song_id serial PRIMARY KEY, 
 	name VARCHAR ( 50 ) NOT NULL,
 	music_artists_id INT NOT NULL, 
@@ -16,7 +16,7 @@ CREATE TABLE songs (
 		REFERENCES music_artists (music_artists_id)
 );
 
-CREATE TABLE genres_in_songs (
+CREATE TABLE IF NOT EXISTS genres_in_songs (
 	genre_id INT,
 	song_id INT,
 	PRIMARY KEY (genre_id, song_id),
@@ -26,7 +26,7 @@ CREATE TABLE genres_in_songs (
 		REFERENCES songs (song_id)
 );
 
-CREATE TABLE song_feature (
+CREATE TABLE IF NOT EXISTS song_feature (
 	song_id INT,
 	music_artists_id INT,
 	PRIMARY KEY (song_id, music_artists_id),
@@ -36,7 +36,7 @@ CREATE TABLE song_feature (
 		REFERENCES music_artists(music_artists_id)
 );
 
-COPY music_artists(name)
+COPY music_artists(name) 
 FROM '/sample/music_artists.csv'
 WITH (FORMAT csv);
 
