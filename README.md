@@ -1,5 +1,5 @@
 # local-kubernetes
-Practice for setting up and running a local kubernetes cluster involving a micro-service 
+A casual project for practicing setting up and running a local kubernetes cluster involving a micro-service 
 
 # Setup
 ## Pre-requisites
@@ -70,9 +70,20 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [x] Create DB init script (tables and relations)
 - [x] Script for Postgres in a container in the cluster 
 - [x] Importing CSVs into DB 
-- [ ] Micro-service for querying and modifying the DB 
-- [ ] Setup the micro-service in a pod (using a script) where it has access to the DB 
+- [ ] Micro-service for querying and modifying the DB in a pod (using a script) where it has access to the DB 
 - [ ] Add nginx as a front-proxy for the micro-service
+
+### Current thoughts and efforts 
+Recently got back to the project, took a while to figure out how to get a simple micro-service working locally. 
+Turns out, it helps to have maven downloaded and a JRE that matches your JDK version when you want to compile and launch your application from a JAR (and needed some changes to pom.xml). 
+
+Current step and progress breakdown:
+- [x] Simple micro-service
+- [ ] Setup the micro-service in a pod (should be accessible via localhost?)
+- [ ] Provide micro-service access to the DB
+- [ ] Modify the micro-service so it 
+
+Not sure how much more time I'll spend on this project, I have some simulations I want to try to setup and run. I think a nice middle-ground might be to at least finish off the primary TO-DO list. 
 
 # Extensions/Future Projects (aka, feature creep dump):
 - endpoint "Random" that recommends anything (or if given a category, from the category)
