@@ -20,3 +20,11 @@ kubectl apply -f ../cluster/database/
 mkdir temp
 cd temp 
 echo ${cluster_name} > cluster-name
+cd .. 
+
+# dockerizing the micro-service
+cd ../micro-service/hobbies
+mvn package
+cp ./target/hobbies-0.0.1-SNAPSHOT.jar ../../docker/micro-service
+cd ../../docker/micro-service 
+docker build -t hobbies/micro-service:v1.0 .

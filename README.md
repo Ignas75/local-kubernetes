@@ -74,11 +74,11 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [ ] Add nginx as a front-proxy for the micro-service
 
 ### Current thoughts and efforts 
-Recently got back to the project, took a while to figure out how to get a simple micro-service working locally. 
-Turns out, it helps to have maven downloaded and a JRE that matches your JDK version when you want to compile and launch your application from a JAR (and needed some changes to pom.xml). 
+Forgot dockerizing in the list of steps, just completed it. 
 
 Current step and progress breakdown:
 - [x] Simple micro-service
+- [x] Dockerize the micro-service
 - [ ] Setup the micro-service in a pod (should be accessible via localhost?)
 - [ ] Provide micro-service access to the DB
 - [ ] Modify the micro-service so it 

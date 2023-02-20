@@ -6,8 +6,9 @@ path_to_cluster_name="${path_to_dir}\cluster-name"
 cluster_name=$(cat ${path_to_cluster_name})
 kind delete cluster --name=${cluster_name}
 
-# removing docker image
+# removing docker images
  docker image rm hobbies/postgres:v1.0
+ docker image rm hobbies/micro-service:v1.0
 
 # cleaning temp file 
 rm ./cluster-name
