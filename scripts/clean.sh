@@ -10,8 +10,7 @@ kind delete cluster --name=${cluster_name}
  docker image rm hobbies/postgres:v1.0
  docker image rm hobbies/micro-service:v1.0
 
-# cleaning temp file 
+# cleaning the script folder by getting rid of the temp file 
 rm ./cluster-name
-
 cd ..
 rmdir temp

@@ -16,15 +16,22 @@ kind load docker-image hobbies/postgres:v1.0 --name=hobbies
 # creating the postgres resources
 kubectl apply -f ../cluster/database/
 
-# storing the kind cluster name in a file for use in deletion
-mkdir temp
-cd temp 
-echo ${cluster_name} > cluster-name
-cd .. 
-
 # dockerizing the micro-service
 cd ../micro-service/hobbies
 mvn package
 cp ./target/hobbies-0.0.1-SNAPSHOT.jar ../../docker/micro-service
 cd ../../docker/micro-service 
 docker build -t hobbies/micro-service:v1.0 .
+cd ../../scripts
+
+# loading the micro-service image into kind cluster
+kind load docker-image hobbies/micro-service:v1.0 --name=hobbies
+
+# creating the micro-service resources in kubernetes 
+kubectl apply -f ../cluster/micro-service
+
+# storing the kind cluster name in a file for use in deletion
+mkdir temp
+cd temp 
+echo ${cluster_name} > cluster-name
+cd .. 

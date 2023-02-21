@@ -74,16 +74,13 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [ ] Add nginx as a front-proxy for the micro-service
 
 ### Current thoughts and efforts 
-Forgot dockerizing in the list of steps, just completed it. 
+Will have to move on the connecting the micro-service to the DB, this is gonna be quite a bit more work as it's going to require changes to the micro-service that make it evident that it's connected and working with the DB. 
 
 Current step and progress breakdown:
 - [x] Simple micro-service
 - [x] Dockerize the micro-service
-- [ ] Setup the micro-service in a pod (should be accessible via localhost?)
-- [ ] Provide micro-service access to the DB
-- [ ] Modify the micro-service so it 
-
-Not sure how much more time I'll spend on this project, I have some simulations I want to try to setup and run. I think a nice middle-ground might be to at least finish off the primary TO-DO list. 
+- [x] Setup the micro-service in a pod (accessible within the cluster)
+- [ ] Provide micro-service access to the DB and modify the micro-service so it makes use of the database
 
 # Extensions/Future Projects (aka, feature creep dump):
 - endpoint "Random" that recommends anything (or if given a category, from the category)

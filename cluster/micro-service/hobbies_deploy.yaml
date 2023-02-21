@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hobbies
+  labels:
+    app: hobbies
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hobbies
+  template:
+    metadata:
+      labels:
+        app: hobbies
+    spec:
+      containers:
+      - name: hobbies
+        image: hobbies/micro-service:v1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+      
