@@ -1,11 +1,10 @@
-package com.ignasserepka.hobbies;
+package com.example.hobbies;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan
 @SpringBootApplication
 public class HobbiesApplication {
 

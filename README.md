@@ -72,6 +72,7 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [x] Importing CSVs into DB 
 - [ ] Micro-service for querying and modifying the DB in a pod (using a script) where it has access to the DB 
 - [ ] Add nginx as a front-proxy for the micro-service
+- [ ] Add secure passwords to the cluster or certs
 
 ### Current thoughts and efforts 
 Will have to move on the connecting the micro-service to the DB, this is gonna be quite a bit more work as it's going to require changes to the micro-service that make it evident that it's connected and working with the DB. 
@@ -80,7 +81,9 @@ Current step and progress breakdown:
 - [x] Simple micro-service
 - [x] Dockerize the micro-service
 - [x] Setup the micro-service in a pod (accessible within the cluster)
-- [ ] Provide micro-service access to the DB and modify the micro-service so it makes use of the database
+- [x] Figure out localhost Postgres connections to Java app
+- [x] Make Java api make use of the database
+- [ ] Get the ms to interact with the DB in the cluster
 
 # Extensions/Future Projects (aka, feature creep dump):
 - endpoint "Random" that recommends anything (or if given a category, from the category)

@@ -1,4 +1,4 @@
-package com.ignasserepka.hobbies.controllers;
+package com.example.hobbies.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

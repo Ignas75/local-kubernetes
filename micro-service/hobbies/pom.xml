@@ -12,7 +12,7 @@
 	<artifactId>hobbies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hobbies</name>
-	<description>Simple micro-service for a local kubernetes project</description>
+	<description>Simple microservice for a local kubernetes project</description>
 	<properties>
 		<java.version>19</java.version>
 	</properties>
@@ -32,6 +32,22 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -40,7 +56,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.ignasserepka.hobbies.HobbiesApplication</mainClass>
+					<mainClass>com.example.hobbies.HobbiesApplication</mainClass>
 					<layout>JAR</layout>
 				</configuration>
 			</plugin>
