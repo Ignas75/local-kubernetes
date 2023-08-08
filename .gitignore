@@ -60,4 +60,4 @@ build/
 .vscode/
 
 #
-micro-service/hobbies/src/main/resources/application.properties
+/micro-service/hobbies/src/main/resources/application.properties
