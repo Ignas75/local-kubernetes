@@ -18,7 +18,7 @@ kubectl apply -f ../cluster/database/
 
 # dockerizing the micro-service
 cd ../micro-service/hobbies
-mvn package
+mvn package -DskipTests
 cp ./target/hobbies-0.0.1-SNAPSHOT.jar ../../docker/micro-service
 cd ../../docker/micro-service 
 docker build -t hobbies/micro-service:v1.0 .

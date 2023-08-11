@@ -58,6 +58,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-#
-/micro-service/hobbies/src/main/resources/application.properties

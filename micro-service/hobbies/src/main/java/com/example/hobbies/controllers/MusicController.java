@@ -20,4 +20,12 @@ public class MusicController {
         }
         return new ResponseEntity<>("No music artist was found. Try a different name.", HttpStatus.OK);
     }
+
+    @GetMapping("/music/artists/get/{id}")
+    public ResponseEntity<String> getMusicArtistById(@PathVariable int id){
+        if(musicArtistRepository.existsById(id)){
+            return new ResponseEntity<>(musicArtistRepository.getReferenceById(id).toString(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>("No music artist was found. Try a different id.", HttpStatus.OK);
+    }
 }

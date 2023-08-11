@@ -70,7 +70,7 @@ The database chosen is postgresql, no strong reasons other than it being open-so
 - [x] Create DB init script (tables and relations)
 - [x] Script for Postgres in a container in the cluster 
 - [x] Importing CSVs into DB 
-- [ ] Micro-service for querying and modifying the DB in a pod (using a script) where it has access to the DB 
+- [x] Micro-service for querying and modifying the DB in a pod (using a script) where it has access to the DB 
 - [ ] Add nginx as a front-proxy for the micro-service
 - [ ] Add secure passwords to the cluster or certs
 
@@ -83,7 +83,9 @@ Current step and progress breakdown:
 - [x] Setup the micro-service in a pod (accessible within the cluster)
 - [x] Figure out localhost Postgres connections to Java app
 - [x] Make Java api make use of the database
-- [ ] Get the ms to interact with the DB in the cluster
+- [x] Get the ms to be in the cluster
+- [x] Connect the ms in the cluster to the DB
+- [ ] Add the tests back in for the Maven package step
 
 # Extensions/Future Projects (aka, feature creep dump):
 - endpoint "Random" that recommends anything (or if given a category, from the category)

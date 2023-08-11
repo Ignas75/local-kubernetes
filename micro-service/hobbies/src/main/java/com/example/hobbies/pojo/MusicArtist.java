@@ -13,6 +13,9 @@ public class MusicArtist {
     @Column
     private String name;
 
+    public MusicArtist(){
+    }
+
     public MusicArtist(int id, String name){
         this.id = id;
         this.name = name;

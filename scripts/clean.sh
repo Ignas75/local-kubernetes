@@ -1,5 +1,7 @@
-cd temp
+# deleting hobbies micro-service snapshot
+rm ../docker/micro-service/hobbies-0.0.1-SNAPSHOT.jar
 
+cd temp
 # deleting the kind cluster
 path_to_dir=$(pwd -W | sed 's/\//\\/g') # converting file path to windows backslashes, because of a git bash glitch with finding files 
 path_to_cluster_name="${path_to_dir}\cluster-name"
