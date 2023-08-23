@@ -96,3 +96,4 @@ Current step and progress breakdown:
 - setup links to external websites (e.g. here's where you can watch/buy/play x)
 - config file for changing defaults, like the default cluster name from "hobbies" to anything else really 
 - make it multi-OS compatible (current issue: git-bash file paths interpretation requires different code from Unix based OS in clean.sh)
+- reduce/remove need for setup and clean script need for testing every minor change

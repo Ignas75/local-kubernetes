@@ -21,16 +21,21 @@ public class MusicArtist {
         this.name = name;
     }
 
+    public MusicArtist(String name){
+        this.name = name;
+    }
+
     public int getId(){
         return id;
     }
-
-    public String getString(){
-        return name;
-    }
-
+    
     public String toString() {
         return "music_artist{" +
-                "name:=" + name + "}";
+                "id:= " + id + 
+                ",name:= " + name + "}";
+    }
+
+    public String getName(){
+        return this.name;
     }
 }
